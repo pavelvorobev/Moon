@@ -53,6 +53,18 @@
   }
 }
 
+.video__player img {
+  @media (max-width: $width-desktop) {
+    width: 503px;
+    height: 282px;
+  }
+
+  @media (max-width: $width-tablet) {
+    width: 288px;
+    height: 161px;
+  }
+}
+
 .video__play {
   position: absolute;
   cursor: pointer;

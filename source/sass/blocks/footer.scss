@@ -47,3 +47,15 @@
     padding: 0 16px;
   }
 }
+
+.footer img {
+  @media (max-width: $width-desktop) {
+    width: 698px;
+    height: 545px;
+  }
+
+  @media (max-width: $width-tablet) {
+    width: 320px;
+    height: 250px;
+  }
+}
