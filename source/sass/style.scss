@@ -1,3 +1,21 @@
-h1 {
-  color: red;
-}
+// Base
+@import "base/normalize.scss";
+@import "base/variables.scss";
+@import "base/mixins";
+@import "base/global.scss";
+@import "base/fonts.scss";
+
+
+//Blocks
+@import "blocks/visually-hidden.scss";
+@import "blocks/container.scss";
+@import "blocks/body.scss";
+@import "blocks/form.scss";
+@import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/promo.scss";
+@import "blocks/about.scss";
+@import "blocks/bicycles.scss";
+@import "blocks/video.scss";
+@import "blocks/footer.scss";
+@import "blocks/contacts.scss";
