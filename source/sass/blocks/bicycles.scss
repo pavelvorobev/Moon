@@ -44,7 +44,7 @@
     z-index: 0;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       transform: translateY(-100%);
@@ -74,13 +74,13 @@
     margin-top: 49px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -23px;
       left: -23px;
       width: 47px;
       height: 47px;
-      border: 8px solid #0AD9C6;
+      border: 8px solid $color-main;
 
       @media (max-width: $width-desktop) {
         display: none;
@@ -88,13 +88,13 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 25px;
       right: -23px;
       width: 47px;
       height: 47px;
-      border: 8px solid #0AD9C6;
+      border: 8px solid $color-main;
 
       @media (max-width: $width-desktop) {
         display: none;
@@ -106,7 +106,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -40px;
       right: -40px;
@@ -140,7 +140,6 @@
   }
 
   @media (min-width: $width-tablet) and (max-width: $width-desktop) {
-
     &:nth-child(2n+1) {
       margin-right: 50px;
     }

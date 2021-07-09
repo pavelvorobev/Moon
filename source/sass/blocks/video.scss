@@ -73,11 +73,11 @@
   transform: translate(-50%, -50%);
   width: 65px;
   height: 65px;
-  background: $color-main url('../img/icon-play.svg') no-repeat center;
+  background: $color-main url("../img/icon-play.svg") no-repeat center;
   border-radius: 50%;
 
   &:hover {
-    background: rgba($color-main, 0.9) url('../img/icon-play.svg') no-repeat center;
+    background: rgba($color-main, 0.9) url("../img/icon-play.svg") no-repeat center;
   }
 
   &:focus {

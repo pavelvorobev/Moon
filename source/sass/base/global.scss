@@ -1,9 +1,12 @@
 html {
   box-sizing: border-box;
-  font-family: Open Sans, Arial, sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
+  scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
