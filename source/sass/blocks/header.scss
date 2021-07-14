@@ -1,11 +1,12 @@
 .header {
   width: 100%;
   height: 825px;
-  background: $color-black url("../img/main-bg-desktop.jpg") no-repeat center top;
+  background: $color-black url("../img/main-bg-desktop.jpg") no-repeat center;
   background-size: cover;
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background: $color-black url("../img/main-bg-desktop@2x.jpg") no-repeat center;
+    background-size: cover;
   }
 
   @media (max-width: $width-desktop) {
