@@ -1,19 +1,19 @@
 .video {
   position: relative;
   box-sizing: border-box;
-  height: 706px;
+  min-height: 706px;
   padding: 120px 0 0 0;
   background-color: $color-video-background;
   color: $color-white;
   text-align: center;
 
   @media (max-width: $width-desktop) {
-    height: 413px;
+    min-height: 413px;
     padding: 70px 0 0 0;
   }
 
   @media (max-width: $width-tablet) {
-    height: 384px;
+    min-height: 384px;
     padding: 84px 0 0 0;
   }
 }
@@ -30,26 +30,32 @@
 
 .video p {
   max-width: 340px;
-  margin: 0 auto;
+  margin: 0 auto /* 56px */0 auto;
   color: rgba($color-white, 0.7);
 
+  @include fontMeasure(300, 16px, 28px);
+
   @media (max-width: $width-desktop) {
+    /* margin-bottom: 40px; */
     max-width: 429px;
+  }
+
+  @media (max-width: $width-tablet) {
+    max-width: 288px;
+    /* margin-bottom: 50px; */
   }
 }
 
 .video__player {
-  position: absolute;
-  left: 50%;
-  bottom: -98px;
-  transform: translateX(-50%);
+  position: relative;
+  bottom: -56px;
 
   @media (max-width: $width-desktop) {
-    bottom: -85px;
+    bottom: -40px;
   }
 
   @media (max-width: $width-tablet) {
-    bottom: -48px;
+    bottom: -50px;
   }
 }
 

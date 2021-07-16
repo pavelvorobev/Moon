@@ -1,5 +1,6 @@
 .main-nav__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   @include reset-list;
@@ -37,6 +38,7 @@
       padding-top: 90px;
       background-color: $color-white;
       flex-direction: column;
+      overflow-y: scroll;
     }
   }
 
