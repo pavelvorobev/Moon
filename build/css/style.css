@@ -335,28 +335,28 @@ a {
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: local("Open Sans Light"), url("../../fonts/open-sans-v20-latin_cyrillic-300.woff2") format("woff2"), url("../../fonts/open-sans-v20-latin_cyrillic-300.woff") format("woff"); }
+  src: local("Open Sans Light"), url("../fonts/open-sans-v20-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/open-sans-v20-latin_cyrillic-300.woff") format("woff"); }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Open Sans Regular"), url("../../fonts/open-sans-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../../fonts/open-sans-v20-latin_cyrillic-regular.woff") format("woff"); }
+  src: local("Open Sans Regular"), url("../fonts/open-sans-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/open-sans-v20-latin_cyrillic-regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Open Sans Semibold"), url("../../fonts/open-sans-v20-latin_cyrillic-600.woff2") format("woff2"), url("../../fonts/open-sans-v20-latin_cyrillic-600.woff") format("woff"); }
+  src: local("Open Sans Semibold"), url("../fonts/open-sans-v20-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/open-sans-v20-latin_cyrillic-600.woff") format("woff"); }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Open Sans Bold"), url("../../fonts/open-sans-v20-latin_cyrillic-700.woff2") format("woff2"), url("../../fonts/open-sans-v20-latin_cyrillic-700.woff") format("woff"); }
+  src: local("Open Sans Bold"), url("../fonts/open-sans-v20-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/open-sans-v20-latin_cyrillic-700.woff") format("woff"); }
 
 .visually-hidden {
   position: absolute;
@@ -465,7 +465,6 @@ a {
 
 .header {
   width: 100%;
-  /* min-height: 825px; */
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -477,22 +476,7 @@ a {
       background-size: cover; } }
   @media (max-width: 1023px) {
     .header {
-      /* min-height: 340px; */
-      background: #000000 url("../img/main-bg-tablet.jpg") no-repeat center;
-      background-size: cover; } }
-  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 192dpi), (max-width: 1023px) and (min-resolution: 2dppx) {
-    .header {
-      background: #000000 url("../img/main-bg-tablet@2x.jpg") no-repeat center;
-      background-size: cover; } }
-  @media (max-width: 767px) {
-    .header {
-      /* min-height: 390px; */
-      background: #000000 url("../img/main-bg-mobile.jpg") no-repeat center;
-      background-size: cover; } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (min-resolution: 2dppx) {
-    .header {
-      background: #000000 url("../img/main-bg-mobile@2x.jpg") no-repeat center;
-      background-size: cover; } }
+      background: none; } }
 
 .header__wrapper {
   max-width: 874px;
@@ -617,6 +601,22 @@ a {
   @media (max-width: 767px) {
     .promo__about {
       min-height: 390px; } }
+  @media (max-width: 1023px) {
+    .promo__about {
+      background: #000000 url("../img/main-bg-tablet.jpg") no-repeat center;
+      background-size: cover; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 192dpi), (max-width: 1023px) and (min-resolution: 2dppx) {
+    .promo__about {
+      background: #000000 url("../img/main-bg-tablet@2x.jpg") no-repeat center;
+      background-size: cover; } }
+  @media (max-width: 767px) {
+    .promo__about {
+      background: #000000 url("../img/main-bg-mobile.jpg") no-repeat center;
+      background-size: cover; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (min-resolution: 2dppx) {
+    .promo__about {
+      background: #000000 url("../img/main-bg-mobile@2x.jpg") no-repeat center;
+      background-size: cover; } }
 
 .promo__about img {
   width: 67px;
@@ -812,13 +812,19 @@ a {
       margin: 0 50px; } }
   @media (max-width: 1023px) {
     .bicycles ul {
-      grid-template-columns: 1fr 1fr;
+      /*   grid-template-columns: 1fr 1fr; */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
       margin: 0; } }
   @media (max-width: 767px) {
     .bicycles ul {
+      display: grid;
       grid-template-columns: 1fr; } }
 
 .bicycles__item {
@@ -1074,25 +1080,32 @@ a {
     height: 250px; } }
 
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  margin: 38px auto 0 auto;
+  -webkit-column-gap: 90px;
+     -moz-column-gap: 90px;
+          column-gap: 90px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 38px; }
+          justify-content: center; }
   @media (max-width: 1023px) {
     .contacts {
       margin-top: 20px; } }
   @media (max-width: 767px) {
     .contacts {
       margin-top: 31px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .contacts a {
   display: -webkit-box;
@@ -1106,8 +1119,6 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px; }
-  .contacts a:not(:last-child) {
-    margin-right: 90px; }
   .contacts a:hover {
     color: rgba(0, 0, 0, 0.6); }
   .contacts a:focus {

@@ -39,7 +39,7 @@
           <label class="visually-hidden" for="name">Имя</label>
           <input type="text" name="name" id="name" placeholder="Введите Ваше Имя" required="">
           <label class="visually-hidden" for="phone">Номер телефона</label>
-          <input type="number" name="phone" id="phone" placeholder="Введите Ваш номер телефона" pattern="\+?[0-9\s\-\(\)]+" minlength="12" maxlength="12" required="">
+          <input type="number" name="phone" id="phone" placeholder="Введите Ваш номер телефона" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" pattern="[0-9]" minlength="12" maxlength="12" required="">
           <button type="submit">Подобрать велосипед мечты</button>
         </form>
       </section>
@@ -77,41 +77,48 @@
         <ul>
           <li class="bicycles__item bicycles__item--road">
             <a href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/bicycle-1-mobile.webp 1x, img/bicycle-1-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="img/bicycle-1-desktop.webp 1x, img/bicycle-1-desktop@2x.webp 2x">
-                <!-- 1х: 270px; 2x: 340px -->
-                <source media="(max-width: 1023px)" srcset="img/bicycle-1-mobile.jpg 1x, img/bicycle-1-mobile@2x.jpg 2x">
-                <!-- 1х: 342px; 2x: 684px -->
-                <img src="img/bicycle-1-desktop.jpg" srcset="img/bicycle-1-desktop@2x.jpg 2x" alt="Дорожный велосипед">
-              </picture>
+              <div class="bicycles__image bicycles__image--road">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/bicycle-1-mobile.webp 1x, img/bicycle-1-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/bicycle-1-desktop.webp 1x, img/bicycle-1-desktop@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 340px -->
+                  <source media="(max-width: 1023px)" srcset="img/bicycle-1-mobile.jpg 1x, img/bicycle-1-mobile@2x.jpg 2x">
+                  <!-- 1х: 342px; 2x: 684px -->
+                  <img src="img/bicycle-1-desktop.jpg" srcset="img/bicycle-1-desktop@2x.jpg 2x" alt="Дорожный велосипед">
+                </picture>
+              </div>
 
               <h3>Дорожный велосипед</h3>
             </a>
           </li>
           <li class="bicycles__item bicycles__item--mountain">
             <a href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/bicycle-2-mobile.webp 1x, img/bicycle-2-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="img/bicycle-2-desktop.webp 1x, img/bicycle-2-desktop@2x.webp 2x">
-                <!-- 1х: 270px; 2x: 340px -->
-                <source media="(max-width: 1023px)" srcset="img/bicycle-2-mobile.jpg 1x, img/bicycle-2-mobile@2x.jpg 2x">
-                <!-- 1х: 342px; 2x: 684px -->
-                <img src="img/bicycle-2-desktop.jpg" srcset="img/bicycle-2-desktop@2x.jpg 2x" alt="Горный велосипед">
-              </picture>
+              <div class="bicycles__image bicycles__image--mountain">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/bicycle-2-mobile.webp 1x, img/bicycle-2-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/bicycle-2-desktop.webp 1x, img/bicycle-2-desktop@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 340px -->
+                  <source media="(max-width: 1023px)" srcset="img/bicycle-2-mobile.jpg 1x, img/bicycle-2-mobile@2x.jpg 2x">
+                  <!-- 1х: 342px; 2x: 684px -->
+                  <img src="img/bicycle-2-desktop.jpg" srcset="img/bicycle-2-desktop@2x.jpg 2x" alt="Горный велосипед">
+                </picture>
+              </div>
               <h3>Горный велосипед</h3>
             </a>
           </li>
           <li class="bicycles__item bicycles__item--child">
             <a href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/bicycle-3-mobile.webp 1x, img/bicycle-3-mobile@2x.webp 2x">
-                <source type="image/webp" srcset="img/bicycle-3-desktop.webp 1x, img/bicycle-3-desktop@2x.webp 2x">
-                <!-- 1х: 270px; 2x: 340px -->
-                <source media="(max-width: 1023px)" srcset="img/bicycle-3-mobile.jpg 1x, img/bicycle-3-mobile@2x.jpg 2x">
-                <!-- 1х: 342px; 2x: 684px -->
-                <img src="img/bicycle-3-desktop.jpg" srcset="img/bicycle-3-desktop@2x.jpg 2x" alt="Детский велосипед">
-              </picture>
+              <div class="bicycles__image bicycles__image--child">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/bicycle-3-mobile.webp 1x, img/bicycle-3-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/bicycle-3-desktop.webp 1x, img/bicycle-3-desktop@2x.webp 2x">
+                  <!-- 1х: 270px; 2x: 340px -->
+                  <source media="(max-width: 1023px)" srcset="img/bicycle-3-mobile.jpg 1x, img/bicycle-3-mobile@2x.jpg 2x">
+                  <!-- 1х: 342px; 2x: 684px -->
+                  <img src="img/bicycle-3-desktop.jpg" srcset="img/bicycle-3-desktop@2x.jpg 2x" alt="Детский велосипед">
+                </picture>
+              </div>
+
               <h3>Детский велосипед</h3>
             </a>
           </li>
